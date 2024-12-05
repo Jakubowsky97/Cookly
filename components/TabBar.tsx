@@ -2,18 +2,18 @@ import { StyleSheet ,View, Text } from "react-native";
 import React from "react";
 import { useLinkBuilder} from '@react-navigation/native';
 import { PlatformPressable } from "@react-navigation/elements";
-import FontAwesome from "@expo/vector-icons/FontAwesome";
+import { Ionicons } from "@expo/vector-icons";
 
 export default function TabBar({ state, descriptors, navigation }) {
     const { buildHref } = useLinkBuilder();
     const primaryColor = "#181411";
-    const secondaryColor = "#897361";
+    const secondaryColor = "#737373";
 
     const icons = {
-        index: (props) => <FontAwesome size={28} name="home" color={secondaryColor} {...props} />,
-        recipes: (props) => <FontAwesome size={28} name="book" color={secondaryColor} {...props} />,
-        grocery: (props) => <FontAwesome size={28} name="shopping-bag" color={secondaryColor} {...props} />,
-        profile: (props) => <FontAwesome size={28} name="user" color={secondaryColor} {...props} />,
+        index: (props) => <Ionicons size={26} name="home-outline" color={secondaryColor} {...props} />,
+        recipes: (props) => <Ionicons size={26} name="book-outline" color={secondaryColor} {...props} />,
+        grocery: (props) => <Ionicons size={26} name="bag-outline" color={secondaryColor} {...props} />,
+        profile: (props) => <Ionicons size={26} name="person-outline" color={secondaryColor} {...props} />,
     }
     return (
     <View style={styles.tabbar}>
@@ -63,7 +63,7 @@ export default function TabBar({ state, descriptors, navigation }) {
                     color: isFocused ? primaryColor : secondaryColor
                 })
             }
-            <Text style={{ color: isFocused ? primaryColor : secondaryColor }}>
+            <Text style={{ color: isFocused ? primaryColor : secondaryColor, fontSize: 11 }}>
               {label}
             </Text>
           </PlatformPressable>
@@ -81,8 +81,8 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         backgroundColor: 'white',
-        paddingHorizontal: 20,
-        paddingVertical: 15
+        paddingHorizontal: 5,
+        paddingVertical: 10,
     },
     tabbarItem: {
         flex: 1,

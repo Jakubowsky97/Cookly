@@ -6,7 +6,7 @@ import React from 'react';
 export default function TabLayout() {
     return (
         <Tabs 
-            screenOptions={{ tabBarActiveTintColor: 'black'}}
+            screenOptions={{ tabBarActiveTintColor: 'black', headerTitleAlign: 'center'}}
             tabBar={props => <TabBar {...props}/>}
             >
             <Tabs.Screen
