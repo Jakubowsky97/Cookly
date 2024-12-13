@@ -36,4 +36,11 @@ export interface Recipe {
     }
   };
 
-  export const getPopularCategories
+  // export const getPopularCategories = async () {
+  //   try {
+  //     const response = await axios;
+  //     return response.data;
+  //   } catch (error) {
+
+  //   }
+  // }
